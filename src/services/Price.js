@@ -1,9 +1,7 @@
 class Price {
 	static calcular(valor, taxa, meses) {
 		//Array de retorno
-		let parcelas = [
-			new Parcela(0, 0, 0, 0, valor)
-		];
+		let parcelas = new ListaParcelas();
 
 		//Saldo devedor
 		let saldoDevedor = new Dinheiro(valor);
@@ -42,7 +40,7 @@ class Price {
 				saldoDevedor.value
 			);
 
-			parcelas.push(parcela);
+			parcelas.adicionar(parcela);
 
 			//Adiciona um mês
 			mes++;

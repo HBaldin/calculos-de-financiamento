@@ -11,13 +11,27 @@
 <body>
 
     <script src="src/models/Dinheiro.js"></script>
+    <script src="src/models/ListaParcelas.js"></script>
     <script src="src/models/Parcela.js"></script>
     <script src="src/services/SAC.js"></script>
     <script src="src/services/Price.js"></script>
 
     <script>
-        console.log(SAC.calcular(1000, 10, 10));
-        console.log(Price.calcular(30000,1.5,12));
+        let parcelas = SAC.calcular(10000, 1, 12);
+
+        console.log(parcelas);
+        console.log(parcelas.maior());
+        console.log(parcelas.menor());
+        console.log(parcelas.rendaMinima());
+
+
+        parcelas = Price.calcular(30000, 1, 12);
+
+        console.log(parcelas);
+        console.log(parcelas.maior());
+        console.log(parcelas.menor());
+        console.log(parcelas.rendaMinima());
+        // console.log(Price.calcular(30000,1,12));
     </script>
 </body>
 

@@ -1,5 +1,6 @@
 class Dinheiro {
     constructor(valor) {
+        valor = this._arredondar(valor);
         this._valor = (valor * 100);
     }
 
@@ -9,5 +10,9 @@ class Dinheiro {
 
     set value(valor) {
         this._valor = (valor * 100);
+    }
+
+    _arredondar(valor) {
+        return Math.floor(valor * 100) / 100;
     }
 }
